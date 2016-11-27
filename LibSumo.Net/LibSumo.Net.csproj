@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28AFC763-1D40-48B3-B956-06FB9EAD3A4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LibSumo.Net</RootNamespace>
+    <AssemblyName>LibSumo.Net</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\Acknowledge.cs" />
+    <Compile Include="Command\animation\Metronome.cs" />
+    <Compile Include="Command\animation\Ondulation.cs" />
+    <Compile Include="Command\animation\Slalom.cs" />
+    <Compile Include="Command\animation\SlowShake.cs" />
+    <Compile Include="Command\animation\Spin.cs" />
+    <Compile Include="Command\animation\SpinJump.cs" />
+    <Compile Include="Command\animation\SpinToPosture.cs" />
+    <Compile Include="Command\animation\Spiral.cs" />
+    <Compile Include="Command\animation\StopAnimation.cs" />
+    <Compile Include="Command\animation\Tap.cs" />
+    <Compile Include="Command\Interfaces\CommonCommand.cs" />
+    <Compile Include="Command\Common\StringHelperClass.cs" />
+    <Compile Include="Command\Interfaces\Command.cs" />
+    <Compile Include="Command\CommandException.cs" />
+    <Compile Include="Command\movement\Jump.cs" />
+    <Compile Include="Command\movement\JumpMotorProblemChanged.cs" />
+    <Compile Include="Command\movement\Pcmd.cs" />
+    <Compile Include="Command\CommandReader.cs" />
+    <Compile Include="Command\CommandKey.cs" />
+    <Compile Include="Command\Common\CurrentDate.cs" />
+    <Compile Include="Command\Common\CurrentTime.cs" />
+    <Compile Include="Command\Common\Disconnect.cs" />
+    <Compile Include="Command\Common\NullTerminatedString.cs" />
+    <Compile Include="Command\Common\Pong.cs" />
+    <Compile Include="Command\ChannelType.cs" />
+    <Compile Include="Command\FrameType.cs" />
+    <Compile Include="Command\Multimedia\AudioTheme.cs" />
+    <Compile Include="Command\Multimedia\VideoStreaming.cs" />
+    <Compile Include="Command\Multimedia\Volume.cs" />
+    <Compile Include="DroneController.cs" />
+    <Compile Include="listner\BatteryListener.cs" />
+    <Compile Include="listner\BatteryState.cs" />
+    <Compile Include="listner\CriticalBatteryListener.cs" />
+    <Compile Include="listner\EventListener.cs" />
+    <Compile Include="listner\OutdoorSpeedListener.cs" />
+    <Compile Include="listner\PCMDListener.cs" />
+    <Compile Include="listner\VideoListener.cs" />
+    <Compile Include="Network\DroneConnection.cs" />
+    <Compile Include="Network\Handshake\HandshakeResponse.cs" />
+    <Compile Include="Network\Handshake\HandshakeRequest.cs" />
+    <Compile Include="Network\Handshake\TcpHandshake.cs" />
+    <Compile Include="Network\WirelessLanDroneConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

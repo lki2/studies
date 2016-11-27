@@ -1,0 +1,9 @@
+D:\Desktop\libsumo.net\LibSumo.Net\bin\Release\LibSumo.Net.dll
+D:\Desktop\libsumo.net\LibSumo.Net\bin\Release\LibSumo.Net.pdb
+D:\Desktop\libsumo.net\LibSumo.Net\bin\Release\log4net.dll
+D:\Desktop\libsumo.net\LibSumo.Net\bin\Release\Newtonsoft.Json.dll
+D:\Desktop\libsumo.net\LibSumo.Net\bin\Release\log4net.xml
+D:\Desktop\libsumo.net\LibSumo.Net\bin\Release\Newtonsoft.Json.xml
+D:\Desktop\libsumo.net\LibSumo.Net\obj\Release\LibSumo.Net.dll
+D:\Desktop\libsumo.net\LibSumo.Net\obj\Release\LibSumo.Net.pdb
+D:\Desktop\libsumo.net\LibSumo.Net\obj\Release\LibSumo.Net.csprojResolveAssemblyReference.cache
